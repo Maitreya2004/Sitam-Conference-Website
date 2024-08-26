@@ -1,0 +1,60 @@
+body {
+  background-color: #007bff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; /* Add a clean, modern font family */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  color: black;
+}
+
+.logo-link {
+  display: inline-block;
+  border: 2px solid yellow; /* Yellow outline around the logo */
+  border-radius: 50%; /* Make the outline circular */
+  padding: 5px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.title {
+  font-size: 30px;
+  color: royalblue;
+  font-weight: 700;
+  font-family: 'Merriweather', serif; /* A more elegant font for the title */
+  letter-spacing: 1px;
+  position: relative;
+  padding-left: 30px;
+  text-transform: uppercase; /* Optional: Makes the text all uppercase */
+}
+
+/* Button styles */
+button {
+  font-size: 14px;
+  padding: 0.5em 2em;
+  border: transparent;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  background: dodgerblue;
+  color: white;
+  border-radius: 4px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+ 
+button:hover {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+}
+ 
+button:active {
+  transform: translate(0em, 0.2em);
+}
