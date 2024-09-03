@@ -1,0 +1,52 @@
+.about-page {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-container {
+    width: 48%;
+    padding: 20px;
+    background-color: #e8e8e8; /* Light gray background for better contrast */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Add space between the two about containers */
+}
+
+.about-container:last-child {
+    margin-right: 0; /* Remove margin from the last container */
+}
+
+.about-container h2 {
+    background-color: dodgerblue;
+    color: #e8e8e8;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.about-container p {
+    color: #ff6961; /* Light red color for text */
+    line-height: 1.6;
+}
+
+.about-sitam p {
+    color: #ff6961; /* Set text color for Vision and Mission content to black */
+}
+
+/* Style for Vision and Mission Headings */
+.about-sitam h3 {
+    color: dodgerblue;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Divider Line Between Vision and Mission */
+.about-sitam .divider {
+    border-top: 1px solid dodgerblue;
+    margin: 10px 0;
+}

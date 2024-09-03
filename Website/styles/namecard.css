@@ -1,0 +1,79 @@
+/* Container for horizontally scrolling name cards */
+.custom-namecard-container {
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable snapping for smoother scrolling */
+    padding: 20px; /* Padding around the container */
+    gap: 15px; /* Space between cards */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Individual card styles */
+.custom-card {
+    flex: 0 0 auto; /* Prevent the card from shrinking or growing */
+    width: 190px; /* Fixed width for each card */
+    height: 254px; /* Fixed height for each card */
+    background: linear-gradient(to top, #ff930f, #ffcc33); /* Gradient background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37); /* Shadow for depth */
+    padding: 16px; /* Padding inside the card */
+    color: #1b1b1b; /* Text color */
+    position: relative; /* For positioning child elements */
+    outline: 6px solid #f5f5f5; /* Outline around the card */
+    transition: background-color 1s ease-in-out; /* Smooth background color transition */
+    overflow: hidden; /* Hide any overflow content */
+}
+
+/* Card front and back styles */
+.custom-card-front {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860); /* Smooth transition for flip effect */
+}
+
+.custom-card-back {
+    transform: translateX(120%);
+    transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860); /* Smooth transition for flip effect */
+}
+
+/* Text styling */
+.custom-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.custom-name::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    margin: 2px auto;
+    background-color: #1b1b1b;
+    border-radius: 50%;
+}
+
+/* Hover effects */
+.custom-card:hover {
+    background-color: rgba(27, 27, 27, 0.25); /* Light overlay on hover */
+}
+
+.custom-card:hover .custom-card-front {
+    transform: translateX(-100%); /* Slide out the front on hover */
+}
+
+.custom-card:hover .custom-card-back {
+    transform: translateX(0); /* Slide in the back on hover */
+}
+
+/* Reduce opacity of non-hovered cards */
+.custom-namecard-container:hover > .custom-card:not(:hover) {
+    opacity: 0.2; /* Dim non-hovered cards */
+}
+
+/* Ensure no interference with other elements */
+body .custom-namecard-container {
+    margin: 0; /* Remove any default margin */
+}
